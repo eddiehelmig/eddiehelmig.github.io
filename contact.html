@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — Ed Helmig</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <nav id="main-nav">
+    <a href="index.html" class="nav-brand">Ed<span>.</span>Helmig</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html" aria-current="page">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero-banner compact">
+    <img src="images/hero-banner.jpg" alt="Ed Helmig banner">
+    <div class="hero-overlay">
+      <h1>Ed Helmig</h1>
+      <p class="tagline">Graphic Designer &nbsp;·&nbsp; Digital Artist &nbsp;·&nbsp; Photographer</p>
+    </div>
+  </div>
+
+  <div class="page-wrapper">
+
+    <header class="page-header reveal">
+      <p class="subtitle">Get in Touch</p>
+      <h1>Contact</h1>
+    </header>
+
+    <article class="section reveal">
+      <div class="stamp">Open to freelance &amp; collaborative opportunities</div>
+
+      <div class="contact-layout" style="margin-top:1.4rem;">
+        <div>
+          <p style="color:var(--ink-muted);margin-bottom:1.1rem;">Have a project in mind, want to collaborate, or just want to say hello? Fill out the form and I'll get back to you.</p>
+          <form action="#" method="post" novalidate>
+            <div class="form-group">
+              <label for="name">Full Name <span style="color:var(--green);">*</span></label>
+              <input id="name" name="name" type="text" placeholder="Your full name" required maxlength="80" autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address <span style="color:var(--green);">*</span></label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required autocomplete="email">
+            </div>
+            <div class="form-group">
+              <label for="message">Message <span style="color:var(--green);">*</span></label>
+              <textarea id="message" name="message" rows="6" placeholder="Tell me about your project or just say hello." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:.62rem;">Send Message</button>
+          </form>
+        </div>
+
+        <aside>
+          <div class="contact-info">
+            <h3>Direct Contact</h3>
+            <p>I'm open to freelance work, collaborations, and creative opportunities.</p>
+            <p style="margin-top:.5rem;"><a href="mailto:eddiehelmig68@gmail.com" style="color:var(--gold);font-weight:500;">eddiehelmig68@gmail.com</a></p>
+          </div>
+          <div class="contact-info">
+            <h3>Currently</h3>
+            <p style="margin-bottom:.5rem;">Studying Fine Arts at Delaware County Community College.</p>
+            <h3 style="margin-top:.65rem;">Based in</h3>
+            <p style="margin:0;">Montgomery County, Pennsylvania</p>
+          </div>
+        </aside>
+      </div>
+
+        <!-- Business Card Flip -->
+        <div class="biz-card-section">
+          <h3>Business Card</h3>
+          <p>Hover to flip between front and back.</p>
+          <div class="biz-card-flip" title="Hover to flip">
+            <div class="biz-card-inner">
+              <div class="biz-card-front">
+                <img src="images/business-card-front.png" alt="Ed Helmig business card — front">
+              </div>
+              <div class="biz-card-back">
+                <img src="images/business-card-back.png" alt="Ed Helmig business card — back">
+              </div>
+            </div>
+          </div>
+          <span class="biz-card-hint">Hover over the card to flip it</span>
+        </div>
+
+    </article>
+
+    <nav class="page-nav">
+      <a href="resume.html"><span class="nav-label">← Previous</span>Resume</a>
+      <div class="divider" style="flex:1;"></div>
+      <a href="index.html"><span class="nav-label">← Back to</span>Home</a>
+    </nav>
+
+    <footer>
+      <p>© <span id="year"></span> Ed Helmig &nbsp;|&nbsp; Montgomery County, PA</p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const nav = document.getElementById("main-nav");
+    window.addEventListener("scroll", () => nav.classList.toggle("scrolled", window.scrollY > 60));
+    const dot = document.getElementById("cursorDot");
+    const ring = document.getElementById("cursorRing");
+    let mx=0,my=0,rx=0,ry=0;
+    document.addEventListener("mousemove", e => { mx=e.clientX; my=e.clientY; dot.style.left=mx+"px"; dot.style.top=my+"px"; });
+    (function animRing(){ rx+=(mx-rx)*.12; ry+=(my-ry)*.12; ring.style.left=rx+"px"; ring.style.top=ry+"px"; requestAnimationFrame(animRing); })();
+    document.querySelectorAll("a,button,input,textarea").forEach(el => {
+      el.addEventListener("mouseenter", () => ring.classList.add("hovered"));
+      el.addEventListener("mouseleave", () => ring.classList.remove("hovered"));
+    });
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if(e.isIntersecting) e.target.classList.add("visible"); });
+    }, {threshold:.1});
+    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

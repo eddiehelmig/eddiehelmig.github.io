@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About — Ed Helmig</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <nav id="main-nav">
+    <a href="index.html" class="nav-brand">Ed<span>.</span>Helmig</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" aria-current="page">About</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero-banner compact">
+    <img src="images/hero-banner.jpg" alt="Ed Helmig banner">
+    <div class="hero-overlay">
+      <h1>Ed Helmig</h1>
+      <p class="tagline">Graphic Designer &nbsp;·&nbsp; Digital Artist &nbsp;·&nbsp; Photographer</p>
+    </div>
+  </div>
+
+  <div class="page-wrapper">
+
+    <header class="page-header reveal">
+      <p class="subtitle">Who I Am</p>
+      <h1>About</h1>
+    </header>
+
+    <article class="section reveal">
+      <div class="stamp">Montgomery County, PA · DCCC Fine Arts</div>
+
+      <div class="about-layout" style="margin-top:1.4rem;">
+        <aside class="about-sidebar">
+          <img class="avatar" src="images/portrait.jpg" alt="Portrait of Ed Helmig">
+          <div class="name-plate">
+            <strong>Ed Helmig</strong>
+            <span>Montgomery County, PA</span>
+          </div>
+          <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">Say Hello</a>
+        </aside>
+
+        <div class="about-content">
+          <h3>Designer's Statement</h3>
+          <p>I'm a digital artist and photographer with a background in <strong>graphic design and visual storytelling</strong>. My creative process combines traditional design principles with modern digital tools, primarily <strong>Procreate</strong>, <strong>Photoshop</strong>, and <strong>Illustrator</strong>, to create artwork that bridges emotion and structure.</p>
+
+          <div class="pull-quote">
+            <p>"My work lives at the intersection of color, form, and feeling — using visual rhythm and minimalism to communicate meaning."</p>
+          </div>
+
+          <p>Whether I'm developing a clean vector illustration, composing a surreal photo edit, or capturing a quiet natural moment through photography, I aim to evoke a sense of <strong>clarity, presence, and atmosphere</strong>. Every piece begins with an emotional intent and resolves through deliberate compositional choices.</p>
+
+          <h3>Professional Goals</h3>
+          <p>My immediate goal is to continue developing my visual identity as a <strong>graphic designer and artist</strong>, while expanding my technical and conceptual range. I'm currently pursuing an Associate of Fine Arts at <strong>Delaware County Community College</strong>, building a portfolio that highlights storytelling, composition, and originality.</p>
+          <p>This portfolio represents a cross-section of my strongest work: from digital paintings and illustrations to photography and compositing. It reflects both my creative growth and my ongoing pursuit of excellence in design.</p>
+
+          <h3>Tools & Mediums</h3>
+          <p><strong>Procreate</strong> for digital painting and illustration · <strong>Adobe Photoshop</strong> for compositing and photo editing · <strong>Adobe Illustrator</strong> for vector work and poster design · <strong>Lightroom</strong> for photography and color grading.</p>
+        </div>
+      </div>
+    </article>
+
+    <nav class="page-nav">
+      <a href="index.html"><span class="nav-label">← Back</span>Home</a>
+      <div class="divider" style="flex:1;"></div>
+      <a href="work.html"><span class="nav-label">Next →</span>Work</a>
+    </nav>
+
+    <footer>
+      <p>© <span id="year"></span> Ed Helmig &nbsp;|&nbsp; Montgomery County, PA</p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const nav = document.getElementById("main-nav");
+    window.addEventListener("scroll", () => nav.classList.toggle("scrolled", window.scrollY > 60));
+    const dot = document.getElementById("cursorDot");
+    const ring = document.getElementById("cursorRing");
+    let mx=0,my=0,rx=0,ry=0;
+    document.addEventListener("mousemove", e => { mx=e.clientX; my=e.clientY; dot.style.left=mx+"px"; dot.style.top=my+"px"; });
+    (function animRing(){ rx+=(mx-rx)*.12; ry+=(my-ry)*.12; ring.style.left=rx+"px"; ring.style.top=ry+"px"; requestAnimationFrame(animRing); })();
+    document.querySelectorAll("a,button,.avatar").forEach(el => {
+      el.addEventListener("mouseenter", () => ring.classList.add("hovered"));
+      el.addEventListener("mouseleave", () => ring.classList.remove("hovered"));
+    });
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if(e.isIntersecting) e.target.classList.add("visible"); });
+    }, {threshold:.1});
+    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

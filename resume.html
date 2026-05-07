@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resume — Ed Helmig</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <nav id="main-nav">
+    <a href="index.html" class="nav-brand">Ed<span>.</span>Helmig</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="resume.html" aria-current="page">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero-banner compact">
+    <img src="images/hero-banner.jpg" alt="Ed Helmig banner">
+    <div class="hero-overlay">
+      <h1>Ed Helmig</h1>
+      <p class="tagline">Graphic Designer &nbsp;·&nbsp; Digital Artist &nbsp;·&nbsp; Photographer</p>
+    </div>
+  </div>
+
+  <div class="page-wrapper">
+
+    <header class="page-header reveal">
+      <p class="subtitle">Background</p>
+      <h1>Resume</h1>
+    </header>
+
+    <article class="section">
+      <div class="stamp reveal">Available for freelance &amp; collaborative work</div>
+      <p style="margin-top:1.1rem;color:var(--ink-muted);" class="reveal">Digital artist focused on illustration, compositing, and photography. Combines a strong background in mechanical troubleshooting and customer support with emerging skills in digital art, photography, and visual communication.</p>
+
+      <div class="divider reveal"><span>Experience &amp; Education</span></div>
+
+      <div class="resume-layout">
+        <div>
+          <div class="resume-section reveal">
+            <h3>Education</h3>
+            <div class="resume-entry">
+              <span class="entry-title">Associate of Fine Arts <em style="font-style:italic;font-size:.85em;color:var(--ink-muted);">(in progress)</em></span>
+              <span class="entry-sub">Delaware County Community College</span>
+            </div>
+            <div class="resume-entry">
+              <span class="entry-title">Associate of Liberal Arts</span>
+              <span class="entry-sub">Montgomery County Community College &nbsp;·&nbsp; 2017</span>
+            </div>
+          </div>
+
+          <div class="resume-section reveal">
+            <h3>Technical Skills</h3>
+            <div class="resume-entry"><span class="entry-title">Adobe Creative Suite</span><span class="entry-sub">Specializing in Photoshop and Illustrator</span></div>
+            <div class="resume-entry"><span class="entry-title">Procreate</span><span class="entry-sub">Digital painting, illustration, character design</span></div>
+            <div class="resume-entry"><span class="entry-title">Photography &amp; Color Grading</span><span class="entry-sub">Lightroom, studio and field photography</span></div>
+            <div class="resume-entry"><span class="entry-title">Poster Design &amp; Vector Art</span><span class="entry-sub">Print-ready layouts, branding, logo recreation</span></div>
+            <div class="resume-entry"><span class="entry-title">Printer &amp; Copier Technology</span><span class="entry-sub">Ricoh, Canon, Kyocera, HP printers &amp; wide-format copiers</span></div>
+            <div class="resume-entry"><span class="entry-title">Microsoft Office &amp; Digital File Handling</span><span class="entry-sub">Word, Excel, PowerPoint; file organization</span></div>
+          </div>
+        </div>
+
+        <aside>
+          <div class="skills-panel reveal">
+            <h3>Soft Skills</h3>
+            <div class="skill-group">
+              <span class="skill-group-label">Interpersonal</span>
+              <ul class="skill-list"><li>Customer Service</li><li>Team Leadership</li><li>Verbal Communication</li></ul>
+            </div>
+            <div class="skill-group">
+              <span class="skill-group-label">Professional</span>
+              <ul class="skill-list"><li>Project Coordination</li><li>Problem Solving</li><li>Time Management</li><li>Adaptability</li></ul>
+            </div>
+          </div>
+          <div class="skills-panel reveal">
+            <h3>Certifications</h3>
+            <ul class="cert-list">
+              <li>Ricoh Certified Service Technician</li>
+              <li>Canon Certified Service Technician</li>
+              <li>Kyocera Certified Service Technician</li>
+              <li>HP Certified Service Technician</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+
+      <!-- ── Resume Viewer ──────────────────────────────────── -->
+      <div class="divider reveal"><span>Resume Document</span></div>
+
+      <div class="download-strip reveal">
+        <p>Download or view the full resume as a PDF.</p>
+        <a href="Ed_Helmig_Resume.pdf" download="Ed_Helmig_Resume.pdf" class="btn btn-primary">↓ Download Resume</a>
+      </div>
+
+      <!-- Inline PDF viewer -->
+      <div class="resume-viewer reveal">
+        <object
+          data="Ed_Helmig_Resume.pdf"
+          type="application/pdf"
+          width="100%"
+          height="780">
+          <div class="resume-fallback">
+            <p>Your browser can't display PDFs inline.</p>
+            <a href="Ed_Helmig_Resume.pdf" download class="btn btn-primary">↓ Download Resume Instead</a>
+          </div>
+        </object>
+      </div>
+
+    </article>
+
+    <nav class="page-nav">
+      <a href="work.html"><span class="nav-label">← Previous</span>Work</a>
+      <div class="divider" style="flex:1;"></div>
+      <a href="contact.html"><span class="nav-label">Next →</span>Contact</a>
+    </nav>
+
+    <footer>
+      <p>© <span id="year"></span> Ed Helmig &nbsp;|&nbsp; Montgomery County, PA</p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const nav = document.getElementById("main-nav");
+    window.addEventListener("scroll", () => nav.classList.toggle("scrolled", window.scrollY > 60));
+    const dot = document.getElementById("cursorDot");
+    const ring = document.getElementById("cursorRing");
+    let mx=0,my=0,rx=0,ry=0;
+    document.addEventListener("mousemove", e => { mx=e.clientX; my=e.clientY; dot.style.left=mx+"px"; dot.style.top=my+"px"; });
+    (function animRing(){ rx+=(mx-rx)*.12; ry+=(my-ry)*.12; ring.style.left=rx+"px"; ring.style.top=ry+"px"; requestAnimationFrame(animRing); })();
+    document.querySelectorAll("a,button").forEach(el => {
+      el.addEventListener("mouseenter", () => ring.classList.add("hovered"));
+      el.addEventListener("mouseleave", () => ring.classList.remove("hovered"));
+    });
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if(e.isIntersecting) e.target.classList.add("visible"); });
+    }, {threshold:.1});
+    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

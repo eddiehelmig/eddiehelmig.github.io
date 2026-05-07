@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ed Helmig — Graphic Designer & Digital Artist</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Custom cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <nav id="main-nav">
+    <a href="index.html" class="nav-brand">Ed<span>.</span>Helmig</a>
+    <ul class="nav-links">
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero-banner home">
+    <img src="images/hero-banner.jpg" alt="Ed Helmig portfolio banner">
+    <div class="hero-overlay">
+      <h1>Ed Helmig</h1>
+      <p class="tagline">Graphic Designer &nbsp;·&nbsp; Digital Artist &nbsp;·&nbsp; Photographer</p>
+      <div class="hero-cta">
+        <a href="work.html" class="btn btn-primary">View My Work</a>
+        <a href="contact.html" class="btn btn-ghost">Get in Touch</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-wrapper">
+
+    <header class="page-header reveal">
+      <p class="subtitle">Portfolio</p>
+      <h1>Featured Work</h1>
+    </header>
+
+    <div class="stat-row reveal">
+      <div class="stat-box"><span class="num">45+</span><span class="desc">Works in portfolio</span></div>
+      <div class="stat-box"><span class="num">4</span><span class="desc">Creative disciplines</span></div>
+      <div class="stat-box"><span class="num">1</span><span class="desc">Competition winner</span></div>
+      <div class="stat-box"><span class="num">∞</span><span class="desc">Works in progress</span></div>
+    </div>
+
+    <p style="color:var(--ink-muted);margin:1.25rem 0 1rem;" class="reveal">
+      A selection of my latest work across digital painting, vector design, and photography.
+      <em style="opacity:.7;">Hover a card to flip it for details.</em>
+    </p>
+
+    <div class="grid-3">
+
+      <article class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front"><img src="images/king-hazy-label.png" alt="King Hazy IPA beer label"></div>
+          <div class="flip-back"><div>
+            <span class="badge-client">✦ Paid Client Work</span>
+            <h3>King Hazy IPA</h3>
+            <p>Beer label for Simple Days Beer, East Greenville PA.</p>
+            <p><small>Photoshop + Illustrator</small></p>
+            <a href="work.html#king-hazy">See details →</a>
+          </div></div>
+        </div>
+      </article>
+
+      <article class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front"><img src="images/atl-reign-poster.png" alt="ATL Reign Game Day Poster"></div>
+          <div class="flip-back"><div>
+            <span class="badge-winner">★ Purchase Award</span>
+            <h3>ATL Reign — Game Day Poster</h3>
+            <p>Award-winning sports poster design.</p>
+            <p><small>Photoshop + Illustrator</small></p>
+            <a href="work.html#atl-reign">See details →</a>
+          </div></div>
+        </div>
+      </article>
+
+      <article class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front"><img src="images/curious-incident-poster.jpg" alt="DCCC play poster"></div>
+          <div class="flip-back"><div>
+            <span class="badge-winner">★ Competition Winner</span>
+            <h3>The Curious Incident of the Dog in the Night-Time</h3>
+            <p>Theater Poster</p>
+            <p><small>Photoshop + Procreate</small></p>
+            <a href="work.html#poster">See details →</a>
+          </div></div>
+        </div>
+      </article>
+
+      <article class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front"><img src="images/Sneaker-Revised.png" alt="Sneaker Advertisement"></div>
+          <div class="flip-back"><div>
+            <h3>Typstacking Poster</h3>
+            <p>Sneaker Advertisement</p>
+            <p><small>Procreate</small></p>
+            <a href="work.html#sneaker-revised">See details →</a>
+          </div></div>
+        </div>
+      </article>
+
+      <article class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front"><img src="images/tribal-mask.jpg" alt="Tribal Mask vector illustration"></div>
+          <div class="flip-back"><div>
+            <h3>Tribal Mask</h3>
+            <p>Bold vector illustration study.</p>
+            <p><small>Illustrator</small></p>
+            <a href="work.html#tribal-mask">See details →</a>
+          </div></div>
+        </div>
+      </article>
+
+      <article class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front"><img src="images/buddha-bakers-bbq.png" alt="Buddha Bakers BBQ logo"></div>
+          <div class="flip-back"><div>
+            <h3>Buddha Bakers BBQ</h3>
+            <p>Logo Design</p>
+            <p><small>Illustrator</small></p>
+            <a href="work.html#buddha-bakers">See details →</a>
+          </div></div>
+        </div>
+      </article>
+
+    </div>
+      </article>
+      </div>
+
+    <div style="text-align:center;margin-top:1.5rem;" class="reveal">
+      <a href="work.html" class="btn btn-ghost">View Full Portfolio →</a>
+    </div>
+
+    <footer>
+      <p>© <span id="year"></span> Ed Helmig &nbsp;|&nbsp; Montgomery County, PA</p>
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Scroll nav shadow
+    const nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
+
+    // Custom cursor
+    const dot  = document.getElementById('cursorDot');
+    const ring = document.getElementById('cursorRing');
+    let mx=0,my=0,rx=0,ry=0;
+    document.addEventListener('mousemove', e => { mx=e.clientX; my=e.clientY; dot.style.left=mx+'px'; dot.style.top=my+'px'; });
+    (function animRing(){
+      rx+=(mx-rx)*.12; ry+=(my-ry)*.12;
+      ring.style.left=rx+'px'; ring.style.top=ry+'px';
+      requestAnimationFrame(animRing);
+    })();
+    document.querySelectorAll('a,button,.flip-card,.stat-box').forEach(el=>{
+      el.addEventListener('mouseenter',()=>ring.classList.add('hovered'));
+      el.addEventListener('mouseleave',()=>ring.classList.remove('hovered'));
+    });
+
+    // Scroll reveal
+    const observer = new IntersectionObserver(entries=>{
+      entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); });
+    },{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+  </script>
+</body>
+</html>

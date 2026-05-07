@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Work — Ed Helmig</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" id="lbClose" aria-label="Close">✕</button>
+      <button class="lightbox-nav lightbox-prev" id="lbPrev" aria-label="Previous">‹</button>
+      <button class="lightbox-nav lightbox-next" id="lbNext" aria-label="Next">›</button>
+      <img id="lbImg" src="" alt="">
+      <div class="lightbox-meta">
+        <span class="lightbox-title" id="lbTitle"></span>
+        <span class="lightbox-caption" id="lbCaption"></span>
+      </div>
+    </div>
+  </div>
+
+  <nav id="main-nav">
+    <a href="index.html" class="nav-brand">Ed<span>.</span>Helmig</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="work.html" aria-current="page">Work</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero-banner compact">
+    <img src="images/hero-banner.jpg" alt="Ed Helmig banner">
+    <div class="hero-overlay">
+      <h1>Ed Helmig</h1>
+      <p class="tagline">Graphic Designer &nbsp;·&nbsp; Digital Artist &nbsp;·&nbsp; Photographer</p>
+    </div>
+  </div>
+
+  <div class="page-wrapper">
+
+    <header class="page-header reveal">
+      <p class="subtitle">Portfolio</p>
+      <h1>Work</h1>
+    </header>
+
+    <article class="section">
+
+      <div class="stamp reveal">Digital Art · Graphic Design · Photography · Illustration</div>
+
+      <p style="margin-top:1.1rem;margin-bottom:1.25rem;color:var(--ink-muted);" class="reveal">
+        Digital painting, vector illustration, graphic design, compositing, and photography.
+        Filter by category — click any image to view full size.
+      </p>
+
+      <div class="filter-tabs reveal" role="group" aria-label="Filter by category">
+        <button class="filter-tab active" data-filter="all">All Work</button>
+        <button class="filter-tab" data-filter="design">Graphic Design</button>
+        <button class="filter-tab" data-filter="digital">Digital Art</button>
+        <button class="filter-tab" data-filter="photo">Photography</button>
+      </div>
+
+      <div class="grid-3" id="work-grid">
+
+        <!-- ── GRAPHIC DESIGN ──────────────────────────────── -->
+
+        <article id="king-hazy" class="work-card" data-category="design"
+          data-title="King Hazy IPA — Simple Days Beer" data-caption="Beer Label Design · Commercial Client · Photoshop + Illustrator · Simple Days Beer, East Greenville PA">
+          <div class="card-img"><img src="images/king-hazy-label.png" alt="King Hazy IPA beer label for Simple Days Beer">
+          <div class="img-overlay"><span>Click to enlarge</span></div></div>
+          <div class="card-body"><span class="badge-client">✦ Paid Client Work</span><h3>King Hazy IPA — Simple Days Beer</h3><p>Beer Label · Photoshop + Illustrator</p></div>
+        </article>
+
+        <article id="atl-reign" class="work-card" data-category="design"
+          data-title="ATL Reign — Game Day Poster" data-caption="Sports Poster Design · Photoshop + Illustrator · Purchase Award Winner">
+          <div class="card-img"><img src="images/atl-reign-poster.png" alt="ATL Reign Game Day poster">
+          <div class="img-overlay"><span>Click to enlarge</span></div></div>
+          <div class="card-body"><span class="badge-purchase">★ Purchase Award</span><h3>ATL Reign — Game Day Poster</h3><p>Sports Poster · Photoshop + Illustrator</p></div>
+        </article>
+
+        <article id="poster" class="work-card" data-category="design"
+          data-title="The Curious Incident of the Dog in the Night-Time" data-caption="Poster Design · Photoshop + Illustrator · Competition Winner">
+          <div class="card-img"><img src="images/curious-incident-poster.jpg" alt="DCCC play poster">
+          <div class="img-overlay"><span>Click to enlarge</span></div></div>
+          <div class="card-body"><span class="badge">★ Competition Winner</span><h3>The Curious Incident of the Dog in the Night-Time</h3><p>Poster Design · Photoshop + Illustrator</p></div>
+        </article>
+        
+        <article id="kinetic" class="work-card" data-category="design"
+          data-title="Kinetic Energy Drink" data-caption="Product Design / Brand Mockup · Photoshop + Illustrator">
+          <div class="card-img"><img src="images/kinetic-energy-drink.png" alt="Kinetic Energy Drink can mockup">
+          <div class="img-overlay"><span>Click to enlarge</span></div></div>
+          <div class="card-body"><span class="tag">Product Design</span><h3>Kinetic Energy Drink</h3><p>Brand Mockup · Photoshop + Illustrator</p></div>
+        </article>
+
+        <article id="atl-reign-jerseys" class="work-card bg-light" data-category="design"
+          data-title="ATL Reign — Logo &amp; Jersey Pack" data-caption="Sports Branding / Identity Design · Illustrator">
+          <div class="card-img"><img src="images/atl-reign-jerseys.jpg" alt="ATL Reign logo and jersey pack">
+          <div class="img-overlay"><span>Click to enlarge</span></div></div>
+          <div class="card-body"><span class="tag">Sports Branding</span><h3>ATL Reign — Logo &amp; Jersey Pack</h3><p>Illustrator</p></div>
+        </article>
+    
+        <article id="electric-ashes" class="work-card" data-category="design"
+          data-title="Electric Ashes — Sparks in the Dust" data-caption="Album Cover Design · Photoshop">
+          <div class="card-img"><img src="images/electric-ashes.png" alt="Electric Ashes album cover">
+          <div class="img-overlay"><span>Click to enlarge</span></div></div>
+          <div class="card-body"><span class="tag">Album Cover</span><h3>Electric Ashes — Sparks in the Dust</h3><p>Photoshop</p></div>
+        </article>
+
+        <article id="Typstacking" class="work-card" data-category="design"
+          data-title="Typstacking Poster" data-caption="Illustration · Digital">
+          <div class="card-img"><img src="images/Typestacking.png" alt="Sneaker Advertisement">
+          <div class="img-overlay"><span>Click to enlarge</span></div></div>
+          <div class="card-body"><span class="tag">Typographic Poster</span><h3>Typestacking</h3><p>Illustrator</p></div>
+        </article>
+
+        <article id="sneaker-revised" class="work-card" data-category="design"
+          data-title="Sneaker Advertisement" data-caption="Composite · Digital">
+          <div class="card-img"><img src="images/Sneaker-Revised.png" alt="Sneaker Advertisement">
+          <div class="img-overlay"><span>Click to enlarge</span></div></div>
+          <div class="card-body"><span class="tag">Poster Design</span><h3>Sneaker Advertisement</h3><p>Photoshop</p></div>
+        </article>
+
+        <article id="avenue-q" class="work-card" data-category="design"
+          data-title="Avenue Q — Theater Poster" data-caption="Theater Poster Design · DCCC Production · Photoshop + Illustrator">
+          <div class="card-img"><img src="images/avenue-q-poster.png" alt="Avenue Q theater poster">
+          <div class="img-overlay"><span>Click to enlarge</span></div></div>
+          <div class="card-body"><span class="tag">Theater Poster</span><h3>Avenue Q — Theater Poster</h3><p>DCCC Production · Photoshop + Illustrator</p></div>
+        </article>
+
+        <article id="bean-theory" class="work-card bg-light" data-category="design"
+          data-title="Bean Theory — Three Flavors" data-caption="Brand / Product Design · Illustrator">
+          <div class="card-img"><img src="images/bean-theory.png" alt="Bean Theory three flavors branding">
+          <div class="img-overlay"><span>Click to enlarge</span></div></div>
+          <div class="card-body"><span class="tag">Branding</span><h3>Bean Theory — Three Flavors</h3><p>Illustrator</p></div>
+        </article>
+
+        <article id="buddha-bakers" class="work-card bg-light" data-category="design"
+          data-title="Buddha Bakers BBQ" data-caption="Logo / Brand Identity · Illustrator">
+          <div class="card-img"><img src="images/buddha-bakers-bbq.png" alt="Buddha Bakers BBQ logo">
+          <div class="img-overlay"><span>Click to enlarge</span></div></div>
+          <div class="card-body"><span class="tag">Logo Design</span><h3>Buddha Bakers BBQ</h3><p>Illustrator</p></div>
+        </article>
+
+        <article id="eagles" class="work-card bg-light" data-category="design"
+          data-title="Eagles Logo Recreation" data-caption="Vector / Illustration · Illustrator + Procreate">
+          <div class="card-img"><img src="images/eagles-recreation.png" alt="Eagles Logo Recreation">
+          <div class="img-overlay"><span>Click to enlarge</span></div></div>
+          <div class="card-body"><span class="tag">Vector / Illustration</span><h3>Eagles Logo Recreation</h3><p>Illustrator + Procreate</p></div>
+        </article>
+
+        <article id="tribal-mask" class="work-card" data-category="design"
+          data-title="Tribal Mask" data-caption="Vector Illustration · Illustrator">
+          <div class="card-img"><img src="images/tribal-mask.jpg" alt="Tribal Mask">
+          <div class="img-overlay"><span>Click to enlarge</span></div></div>
+          <div class="card-body"><span class="tag">Vector Illustration</span><h3>Tribal Mask</h3><p>Illustrator</p></div>
+        </article>
+
+        <article id="wolf" class="work-card bg-light" data-category="design"
+          data-title="Wolf Illustration" data-caption="Vector Illustration · Illustrator">
+          <div class="card-img"><img src="images/wolf-illustration.png" alt="Wolf Illustration">
+          <div class="img-overlay"><span>Click to enlarge</span></div></div>
+          <div class="card-body"><span class="tag">Vector Illustration</span><h3>Wolf Illustration</h3><p>Illustrator</p></div>
+        </article>
+
+        <article id="bull" class="work-card bg-light" data-category="design"
+          data-title="Bull" data-caption="Vector Illustration · Illustrator">
+          <div class="card-img"><img src="images/bull.png" alt="Bull vector illustration">
+          <div class="img-overlay"><span>Click to enlarge</span></div></div>
+          <div class="card-body"><span class="tag">Vector Illustration</span><h3>Bull</h3><p>Illustrator</p></div>
+        </article>
+
+        <!-- ── DIGITAL ART ─────────────────────────────────── -->
+
+        <article id="doug-invite" class="work-card" data-category="digital"
+          data-title="Doug's 3rd Birthday Invite" data-caption="Event Invitation Design · Illustrator + Photoshop">
+          <div class="card-img"><img src="images/doug-birthday-invite.png" alt="Doug's 3rd Birthday party invitation">
+          <div class="img-overlay"><span>Click to enlarge</span></div></div>
+          <div class="card-body"><span class="tag">Print Design</span><h3>Doug's 3rd Birthday Invite</h3><p>Illustrator + Photoshop</p></div>
+        </article>
+
+        <article id="moon-fisherman" class="work-card" data-category="digital"
+          data-title="Moon Fisherman" data-caption="Digital Painting / Composite · Procreate + Photoshop">
+          <div class="card-img"><img src="images/moon-fisherman.png" alt="Figure fishing from a crescent moon on still water">
+          <div class="img-overlay"><span>Click to enlarge</span></div></div>
+          <div class="card-body"><span class="tag">Composite / Painting</span><h3>Moon Fisherman</h3><p>Procreate + Photoshop</p></div>
+        </article>
+
+        <article id="aurora-bear" class="work-card" data-category="digital"
+          data-title="Aurora" data-caption="Digital Painting · Procreate">
+          <div class="card-img"><img src="images/aurora-bear.png" alt="Northern lights over snowy mountain landscape with bear">
+          <div class="img-overlay"><span>Click to enlarge</span></div></div>
+          <div class="card-body"><span class="tag">Digital Painting</span><h3>Aurora</h3><p>Procreate</p></div>
+        </article>
+
+        <article id="candle" class="work-card" data-category="digital"
+          data-title="Candle" data-caption="Digital Painting · Procreate">
+          <div class="card-img"><img src="images/candle.png" alt="Realistic candle flame digital painting">
+          <div class="img-overlay"><span>Click to enlarge</span></div></div>
+          <div class="card-body"><span class="tag">Digital Painting</span><h3>Candle</h3><p>Procreate</p></div>
+        </article>
+
+        <article id="nighthawk" class="work-card" data-category="digital"
+          data-title="Nighthawk" data-caption="Digital Painting · Procreate">
+          <div class="card-img"><img src="images/nighthawk.jpg" alt="Plane with contrail against deep blue and red night sky">
+          <div class="img-overlay"><span>Click to enlarge</span></div></div>
+          <div class="card-body"><span class="tag">Digital Painting</span><h3>Nighthawk</h3><p>Procreate</p></div>
+        </article>
+
+        <article id="plasma-ball" class="work-card" data-category="digital"
+          data-title="Plasma Ball" data-caption="Digital Painting · Procreate">
+          <div class="card-img"><img src="images/plasma-ball.png" alt="Glowing blue plasma ball">
+          <div class="img-overlay"><span>Click to enlarge</span></div></div>
+          <div class="card-body"><span class="tag">Composite / Painting</span><h3>Plasma Ball</h3><p>Procreate + Photoshop</p></div>
+        </article>
+
+        <article id="blue-silhouette" class="work-card" data-category="digital"
+          data-title="Blue Silhouette" data-caption="Digital Painting · Procreate">
+          <div class="card-img"><img src="images/blue-silhouette.jpg" alt="Blue figure silhouette with smoky hair">
+          <div class="img-overlay"><span>Click to enlarge</span></div></div>
+          <div class="card-body"><span class="tag">Digital Painting</span><h3>Blue Silhouette</h3><p>Procreate</p></div>
+        </article>
+
+        <article id="heartbeat" class="work-card" data-category="digital"
+          data-title="Heartbeat" data-caption="Digital Art · Photoshop + Procreate">
+          <div class="card-img"><img src="images/heartbeat.png" alt="Red heart with soundwave art on black background">
+          <div class="img-overlay"><span>Click to enlarge</span></div></div>
+          <div class="card-body"><span class="tag">Digital Art</span><h3>Heartbeat</h3><p>Photoshop + Procreate</p></div>
+        </article>
+
+        <article id="night-owl" class="work-card" data-category="digital"
+          data-title="A Night Owl" data-caption="Photo Composite / Edit · Photoshop">
+          <div class="card-img"><img src="images/night-owl.png" alt="Stylized owl on a branch at night">
+          <div class="img-overlay"><span>Click to enlarge</span></div></div>
+          <div class="card-body"><span class="tag">Composite / Edit</span><h3>A Night Owl</h3><p>Photoshop</p></div>
+        </article>
+
+        <article id="mountain-reflection" class="work-card" data-category="digital"
+          data-title="Mountain Reflection" data-caption="Digital Painting · Procreate">
+          <div class="card-img"><img src="images/mountain-reflection.png" alt="Mountain Reflection">
+          <div class="img-overlay"><span>Click to enlarge</span></div></div>
+          <div class="card-body"><span class="tag">Digital Painting</span><h3>Mountain Reflection</h3><p>Procreate</p></div>
+        </article>
+
+        <article id="recurring-dream" class="work-card" data-category="digital"
+          data-title="A Recurring Dream" data-caption="Digital Painting · Procreate">
+          <div class="card-img"><img src="images/recurring-dream.png" alt="A Recurring Dream">
+          <div class="img-overlay"><span>Click to enlarge</span></div></div>
+          <div class="card-body"><span class="tag">Digital Painting</span><h3>A Recurring Dream</h3><p>Procreate</p></div>
+        </article>
+
+        <article id="resilience" class="work-card" data-category="digital"
+          data-title="Resilience" data-caption="Digital Painting · Procreate">
+          <div class="card-img"><img src="images/resilience.png" alt="Resilience">
+          <div class="img-overlay"><span>Click to enlarge</span></div></div>
+          <div class="card-body"><span class="tag">Digital Painting</span><h3>Resilience</h3><p>Procreate</p></div>
+        </article>
+
+        <article id="flying-blue-dream" class="work-card" data-category="digital"
+          data-title="Flying in a Blue Dream" data-caption="Composite / Painting · Photoshop + Procreate">
+          <div class="card-img"><img src="images/flying-blue-dream.png" alt="Flying in a Blue Dream">
+          <div class="img-overlay"><span>Click to enlarge</span></div></div>
+          <div class="card-body"><span class="tag">Composite / Painting</span><h3>Flying in a Blue Dream</h3><p>Photoshop + Procreate</p></div>
+        </article>
+
+        <article id="quiet-orbit" class="work-card" data-category="digital"
+          data-title="Quiet Orbit" data-caption="Composite / Painting · Photoshop + Procreate">
+          <div class="card-img"><img src="images/quiet-orbit.png" alt="Quiet Orbit">
+          <div class="img-overlay"><span>Click to enlarge</span></div></div>
+          <div class="card-body"><span class="tag">Composite / Painting</span><h3>Quiet Orbit</h3><p>Photoshop + Procreate</p></div>
+        </article>
+
+        <article id="rocket-turtle" class="work-card" data-category="digital"
+          data-title="Rocket Turtle" data-caption="Character Illustration · Procreate">
+          <div class="card-img"><img src="images/rocket-turtle.png" alt="Turtle with rocket pack">
+          <div class="img-overlay"><span>Click to enlarge</span></div></div>
+          <div class="card-body"><span class="tag">Character Design</span><h3>Rocket Turtle</h3><p>Procreate</p></div>
+        </article>
+
+        <article id="flaming-baseball" class="work-card" data-category="digital"
+          data-title="Flaming Baseball" data-caption="Vector Illustration · Illustrator">
+          <div class="card-img"><img src="images/flaming-baseball.png" alt="Flaming baseball cartoon">
+          <div class="img-overlay"><span>Click to enlarge</span></div></div>
+          <div class="card-body"><span class="tag">Vector Illustration</span><h3>Flaming Baseball</h3><p>Illustrator</p></div>
+        </article>
+
+        <article id="michelangelo" class="work-card bg-light" data-category="digital"
+          data-title="Michelangelo (Fan Art)" data-caption="Character Study · Procreate · Fan art">
+          <div class="card-img"><img src="images/michelangelo.png" alt="Michelangelo TMNT character illustration">
+          <div class="img-overlay"><span>Click to enlarge</span></div></div>
+          <div class="card-body"><span class="tag">Character Study</span><h3>Michelangelo (Fan Art)</h3><p>Procreate</p></div>
+        </article>
+
+        <article id="woody-sketch" class="work-card bg-light" data-category="digital"
+          data-title="Woody (Fan Art)" data-caption="Pencil Study · Fan art">
+          <div class="card-img"><img src="images/woody-sketch.png" alt="Woody from Toy Story pencil drawing">
+          <div class="img-overlay"><span>Click to enlarge</span></div></div>
+          <div class="card-body"><span class="tag">Pencil Study</span><h3>Woody (Fan Art)</h3><p>Pencil on paper</p></div>
+        </article>
+
+        <article id="mr-moo" class="work-card" data-category="digital"
+          data-title="Mr. Moo" data-caption="Character Design · Procreate">
+          <div class="card-img"><img src="images/mr-moo.png" alt="Mr. Moo">
+          <div class="img-overlay"><span>Click to enlarge</span></div></div>
+          <div class="card-body"><span class="tag">Character Design</span><h3>Mr. Moo</h3><p>Procreate</p></div>
+        </article>
+
+        <article id="distant-shore" class="work-card" data-category="digital"
+          data-title="Distant Shore" data-caption="Digital Painting · Procreate">
+          <div class="card-img"><img src="images/distant-shore.jpg" alt="Two figures in a red boat on a teal lit waterway">
+          <div class="img-overlay"><span>Click to enlarge</span></div></div>
+          <div class="card-body"><span class="tag">Digital Painting</span><h3>Distant Shore</h3><p>Procreate</p></div>
+        </article>
+
+        <article id="brainwave-symphony" class="work-card" data-category="digital"
+          data-title="Brainwave Symphony" data-caption="Digital Art · Photoshop + Procreate">
+          <div class="card-img"><img src="images/brainwave-symphony.png" alt="Brain wearing headphones with soundwave">
+          <div class="img-overlay"><span>Click to enlarge</span></div></div>
+          <div class="card-body"><span class="tag">Digital Art</span><h3>Brainwave Symphony</h3><p>Photoshop + Procreate</p></div>
+        </article>
+
+        <!-- ── PHOTOGRAPHY ─────────────────────────────────── -->
+
+        <article id="photo-gfs" class="work-card" data-category="photo"
+          data-title="Grounds for Sculpture" data-caption="Photography · Hamilton, NJ">
+          <div class="card-img"><img src="images/grounds-for-sculpture.jpg" alt="Grounds for Sculpture">
+          <div class="img-overlay"><span>Click to enlarge</span></div></div>
+          <div class="card-body"><span class="tag">Photography</span><h3>Grounds for Sculpture</h3><p>Hamilton, NJ</p></div>
+        </article>
+
+        <article id="ali-edit" class="work-card" data-category="photo"
+          data-title="Watching Ali" data-caption="Photo Composite · Photoshop">
+          <div class="card-img"><img src="images/ali-edit.png" alt="Watching Ali">
+          <div class="img-overlay"><span>Click to enlarge</span></div></div>
+          <div class="card-body"><span class="tag">Photo Composite</span><h3>Watching Ali</h3><p>Photoshop</p></div>
+        </article>
+
+        <article id="flow" class="work-card photo-framed" data-category="photo"
+          data-title="Flow" data-caption="Photography">
+          <div class="card-img"><img src="images/flow.jpg" alt="Flow">
+          <div class="img-overlay"><span>Click to enlarge</span></div></div>
+          <div class="card-body"><span class="tag">Photography</span><h3>Flow</h3><p>&nbsp;</p></div>
+        </article>
+
+        <article id="vitality" class="work-card photo-framed" data-category="photo"
+          data-title="Vitality" data-caption="Photography">
+          <div class="card-img"><img src="images/vitality.jpg" alt="Vitality">
+          <div class="img-overlay"><span>Click to enlarge</span></div></div>
+          <div class="card-body"><span class="tag">Photography</span><h3>Vitality</h3><p>&nbsp;</p></div>
+        </article>
+
+        <article id="echoes" class="work-card photo-framed" data-category="photo"
+          data-title="Echoes" data-caption="Photography">
+          <div class="card-img"><img src="images/echoes.jpg" alt="Echoes">
+          <div class="img-overlay"><span>Click to enlarge</span></div></div>
+          <div class="card-body"><span class="tag">Photography</span><h3>Echoes</h3><p>&nbsp;</p></div>
+        </article>
+
+        <article id="giraffe" class="work-card" data-category="photo"
+          data-title="Giraffe" data-caption="Photography">
+          <div class="card-img"><img src="images/giraffe.jpg" alt="Giraffe">
+          <div class="img-overlay"><span>Click to enlarge</span></div></div>
+          <div class="card-body"><span class="tag">Photography</span><h3>Giraffe</h3><p>&nbsp;</p></div>
+        </article>
+
+      </div><!-- /grid -->
+
+      <aside class="credits reveal">
+        All original artwork &amp; photos © Ed Helmig. Historic boxing base photo © Neil Leifer; used as a class edit demonstration. Woody and Michelangelo are fan art / study works and are not original characters. Eagles logo recreation is a personal study. Logos/recreations are not for commercial use.
+      </aside>
+
+    </article>
+
+    <nav class="page-nav">
+      <a href="about.html"><span class="nav-label">← Previous</span>About</a>
+      <div class="divider" style="flex:1;"></div>
+      <a href="resume.html"><span class="nav-label">Next →</span>Resume</a>
+    </nav>
+
+    <footer>
+      <p>© <span id="year"></span> Ed Helmig &nbsp;|&nbsp; Montgomery County, PA</p>
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
+
+    // Custom cursor
+    const dot = document.getElementById('cursorDot');
+    const ring = document.getElementById('cursorRing');
+    let mx=0,my=0,rx=0,ry=0;
+    document.addEventListener('mousemove', e => { mx=e.clientX; my=e.clientY; dot.style.left=mx+'px'; dot.style.top=my+'px'; });
+    (function animRing(){ rx+=(mx-rx)*.12; ry+=(my-ry)*.12; ring.style.left=rx+'px'; ring.style.top=ry+'px'; requestAnimationFrame(animRing); })();
+    document.querySelectorAll('a,button,.work-card').forEach(el => {
+      el.addEventListener('mouseenter', () => ring.classList.add('hovered'));
+      el.addEventListener('mouseleave', () => ring.classList.remove('hovered'));
+    });
+
+    // Scroll reveal
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+    }, {threshold:.08});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Filter tabs
+    const tabs  = document.querySelectorAll('.filter-tab');
+    const cards = document.querySelectorAll('.work-card');
+
+    // Make sure all cards are visible on load
+    cards.forEach(c => { c.style.display = ''; c.classList.remove('hiding'); });
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const f = tab.dataset.filter;
+        cards.forEach(c => {
+          const show = f === 'all' || c.dataset.category === f;
+          if (!show) {
+            c.classList.add('hiding');
+            setTimeout(() => { c.style.display = 'none'; }, 280);
+          } else {
+            c.style.display = '';
+            requestAnimationFrame(() => c.classList.remove('hiding'));
+          }
+        });
+      });
+    });
+
+    // Lightbox
+    const lb      = document.getElementById('lightbox');
+    const lbImg   = document.getElementById('lbImg');
+    const lbTitle = document.getElementById('lbTitle');
+    const lbCap   = document.getElementById('lbCaption');
+    let lbItems = [], lbIndex = 0;
+
+    function buildItems() {
+      const f = document.querySelector('.filter-tab.active').dataset.filter;
+      lbItems = [...cards].filter(c => c.style.display !== 'none' && (f === 'all' || c.dataset.category === f))
+        .map(c => ({ src: c.querySelector('img').src, alt: c.querySelector('img').alt, title: c.dataset.title, caption: c.dataset.caption }));
+    }
+
+    function openLightbox(card) {
+      buildItems();
+      lbIndex = lbItems.findIndex(i => i.src === card.querySelector('img').src);
+      showLbItem(lbIndex);
+      lb.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function showLbItem(i) {
+      const item = lbItems[i];
+      if (!item) return;
+      lbImg.src = item.src; lbImg.alt = item.alt;
+      lbTitle.textContent = item.title;
+      lbCap.textContent = item.caption;
+    }
+
+    function closeLightbox() { lb.classList.remove('open'); document.body.style.overflow = ''; }
+
+    cards.forEach(c => c.addEventListener('click', () => openLightbox(c)));
+    document.getElementById('lbClose').addEventListener('click', closeLightbox);
+    lb.addEventListener('click', e => { if (e.target === lb) closeLightbox(); });
+    document.getElementById('lbPrev').addEventListener('click', e => { e.stopPropagation(); lbIndex = (lbIndex - 1 + lbItems.length) % lbItems.length; showLbItem(lbIndex); });
+    document.getElementById('lbNext').addEventListener('click', e => { e.stopPropagation(); lbIndex = (lbIndex + 1) % lbItems.length; showLbItem(lbIndex); });
+    document.addEventListener('keydown', e => {
+      if (!lb.classList.contains('open')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') { lbIndex = (lbIndex - 1 + lbItems.length) % lbItems.length; showLbItem(lbIndex); }
+      if (e.key === 'ArrowRight') { lbIndex = (lbIndex + 1) % lbItems.length; showLbItem(lbIndex); }
+    });
+  </script>
+</body>
+</html>

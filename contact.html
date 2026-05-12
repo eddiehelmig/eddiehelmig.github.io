@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -32,84 +33,150 @@
 
   <div class="page-wrapper">
 
-    <header class="page-header reveal">
-      <p class="subtitle">Get in Touch</p>
-      <h1>Contact</h1>
-    </header>
+```
+<header class="page-header reveal">
+  <p class="subtitle">Get in Touch</p>
+  <h1>Contact</h1>
+</header>
 
-    <article class="section reveal">
-      <div class="stamp">Open to freelance &amp; collaborative opportunities</div>
+<article class="section reveal">
+  <div class="stamp">Open to freelance &amp; collaborative opportunities</div>
 
-      <div class="contact-layout" style="margin-top:1.4rem;">
-        <div>
-          <p style="color:var(--ink-muted);margin-bottom:1.1rem;">Have a project in mind, want to collaborate, or just want to say hello? Fill out the form and I'll get back to you.</p>
-          <form action="#" method="post" novalidate>
-            <div class="form-group">
-              <label for="name">Full Name <span style="color:var(--green);">*</span></label>
-              <input id="name" name="name" type="text" placeholder="Your full name" required maxlength="80" autocomplete="name">
-            </div>
-            <div class="form-group">
-              <label for="email">Email Address <span style="color:var(--green);">*</span></label>
-              <input id="email" name="email" type="email" placeholder="you@example.com" required autocomplete="email">
-            </div>
-            <div class="form-group">
-              <label for="message">Message <span style="color:var(--green);">*</span></label>
-              <textarea id="message" name="message" rows="6" placeholder="Tell me about your project or just say hello." required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:.62rem;">Send Message</button>
-          </form>
+  <div class="contact-layout" style="margin-top:1.4rem;">
+    <div>
+      <p style="color:var(--ink-muted);margin-bottom:1.1rem;">Have a project in mind, want to collaborate, or just want to say hello? Fill out the form and I'll get back to you.</p>
+
+      <!-- Status message (hidden by default) -->
+      <div id="form-status" style="display:none;padding:.75rem 1rem;border-radius:6px;margin-bottom:1rem;font-weight:500;font-size:.95rem;"></div>
+
+      <form id="contact-form" novalidate>
+        <div class="form-group">
+          <label for="name">Full Name <span style="color:var(--green);">*</span></label>
+          <input id="name" name="name" type="text" placeholder="Your full name" required maxlength="80" autocomplete="name">
         </div>
+        <div class="form-group">
+          <label for="email">Email Address <span style="color:var(--green);">*</span></label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required autocomplete="email">
+        </div>
+        <div class="form-group">
+          <label for="message">Message <span style="color:var(--green);">*</span></label>
+          <textarea id="message" name="message" rows="6" placeholder="Tell me about your project or just say hello." required></textarea>
+        </div>
+        <button type="submit" id="submit-btn" class="btn btn-primary" style="width:100%;justify-content:center;padding:.62rem;">Send Message</button>
+      </form>
+    </div>
 
-        <aside>
-          <div class="contact-info">
-            <h3>Direct Contact</h3>
-            <p>I'm open to freelance work, collaborations, and creative opportunities.</p>
-            <p style="margin-top:.5rem;"><a href="mailto:eddiehelmig68@gmail.com" style="color:var(--gold);font-weight:500;">eddiehelmig68@gmail.com</a></p>
-          </div>
-          <div class="contact-info">
-            <h3>Currently</h3>
-            <p style="margin-bottom:.5rem;">Studying Fine Arts at Delaware County Community College.</p>
-            <h3 style="margin-top:.65rem;">Based in</h3>
-            <p style="margin:0;">Montgomery County, Pennsylvania</p>
-          </div>
-        </aside>
+    <aside>
+      <div class="contact-info">
+        <h3>Direct Contact</h3>
+        <p>I'm open to freelance work, collaborations, and creative opportunities.</p>
+        <p style="margin-top:.5rem;"><a href="mailto:eddiehelmig68@gmail.com" style="color:var(--gold);font-weight:500;">eddiehelmig68@gmail.com</a></p>
       </div>
-
-        <!-- Business Card Flip -->
-        <div class="biz-card-section">
-          <h3>Business Card</h3>
-          <p>Hover to flip between front and back.</p>
-          <div class="biz-card-flip" title="Hover to flip">
-            <div class="biz-card-inner">
-              <div class="biz-card-front">
-                <img src="images/business-card-front.png" alt="Ed Helmig business card — front">
-              </div>
-              <div class="biz-card-back">
-                <img src="images/business-card-back.png" alt="Ed Helmig business card — back">
-              </div>
-            </div>
-          </div>
-          <span class="biz-card-hint">Hover over the card to flip it</span>
-        </div>
-
-    </article>
-
-    <nav class="page-nav">
-      <a href="resume.html"><span class="nav-label">← Previous</span>Resume</a>
-      <div class="divider" style="flex:1;"></div>
-      <a href="index.html"><span class="nav-label">← Back to</span>Home</a>
-    </nav>
-
-    <footer>
-      <p>© <span id="year"></span> Ed Helmig &nbsp;|&nbsp; Montgomery County, PA</p>
-    </footer>
+      <div class="contact-info">
+        <h3>Currently</h3>
+        <p style="margin-bottom:.5rem;">Studying Fine Arts at Delaware County Community College.</p>
+        <h3 style="margin-top:.65rem;">Based in</h3>
+        <p style="margin:0;">Montgomery County, Pennsylvania</p>
+      </div>
+    </aside>
   </div>
 
+    <!-- Business Card Flip -->
+    <div class="biz-card-section">
+      <h3>Business Card</h3>
+      <p>Hover to flip between front and back.</p>
+      <div class="biz-card-flip" title="Hover to flip">
+        <div class="biz-card-inner">
+          <div class="biz-card-front">
+            <img src="images/business-card-front.png" alt="Ed Helmig business card — front">
+          </div>
+          <div class="biz-card-back">
+            <img src="images/business-card-back.png" alt="Ed Helmig business card — back">
+          </div>
+        </div>
+      </div>
+      <span class="biz-card-hint">Hover over the card to flip it</span>
+    </div>
+
+</article>
+
+<nav class="page-nav">
+  <a href="resume.html"><span class="nav-label">← Previous</span>Resume</a>
+  <div class="divider" style="flex:1;"></div>
+  <a href="index.html"><span class="nav-label">← Back to</span>Home</a>
+</nav>
+
+<footer>
+  <p>© <span id="year"></span> Ed Helmig &nbsp;|&nbsp; Montgomery County, PA</p>
+</footer>
+```
+
+  </div>
+
+  <!-- EmailJS SDK -->
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
   <script>
+    // ── EmailJS init ──────────────────────────────────────────────
+    emailjs.init("MYVJXM58N7no-y-8g");
+
+    const SERVICE_ID  = "Gmail";
+    const TEMPLATE_ID = "template_mshvqwi";
+
+    // ── Contact form handler ──────────────────────────────────────
+    document.getElementById("contact-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const name    = document.getElementById("name").value.trim();
+      const email   = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+      const btn     = document.getElementById("submit-btn");
+      const status  = document.getElementById("form-status");
+
+      // Basic validation
+      if (!name || !email || !message) {
+        showStatus("Please fill out all fields.", "error");
+        return;
+      }
+
+      // Disable button while sending
+      btn.disabled = true;
+      btn.textContent = "Sending…";
+
+      emailjs.send(SERVICE_ID, TEMPLATE_ID, {
+        from_name:  name,
+        from_email: email,
+        message:    message
+      })
+      .then(function() {
+        showStatus("Message sent! I'll get back to you soon.", "success");
+        document.getElementById("contact-form").reset();
+      })
+      .catch(function(err) {
+        console.error("EmailJS error:", err);
+        showStatus("Something went wrong. Try emailing me directly at eddiehelmig68@gmail.com", "error");
+      })
+      .finally(function() {
+        btn.disabled = false;
+        btn.textContent = "Send Message";
+      });
+    });
+
+    function showStatus(msg, type) {
+      const status = document.getElementById("form-status");
+      status.textContent = msg;
+      status.style.display = "block";
+      status.style.background = type === "success" ? "rgba(80,200,120,.15)" : "rgba(220,60,60,.15)";
+      status.style.color       = type === "success" ? "var(--green, #50c878)"  : "#e05555";
+      status.style.border      = type === "success" ? "1px solid var(--green, #50c878)" : "1px solid #e05555";
+    }
+
+    // ── Existing site scripts ─────────────────────────────────────
     document.getElementById("year").textContent = new Date().getFullYear();
     const nav = document.getElementById("main-nav");
     window.addEventListener("scroll", () => nav.classList.toggle("scrolled", window.scrollY > 60));
-    const dot = document.getElementById("cursorDot");
+    const dot  = document.getElementById("cursorDot");
     const ring = document.getElementById("cursorRing");
     let mx=0,my=0,rx=0,ry=0;
     document.addEventListener("mousemove", e => { mx=e.clientX; my=e.clientY; dot.style.left=mx+"px"; dot.style.top=my+"px"; });
@@ -123,5 +190,6 @@
     }, {threshold:.1});
     document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
   </script>
+
 </body>
 </html>

@@ -145,9 +145,9 @@
       btn.textContent = "Sending…";
 
       emailjs.send(SERVICE_ID, TEMPLATE_ID, {
-        from_name:  name,
-        from_email: email,
-        message:    message
+        name:    name,
+        email:   email,
+        message: message
       })
       .then(function() {
         showStatus("Message sent! I'll get back to you soon.", "success");
